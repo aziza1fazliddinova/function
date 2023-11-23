@@ -81,33 +81,47 @@
 
 function sort(arr) {
 
-    let sorted = false
+  let sorted = false
 
-    while (!sorted) {
-      sorted = true
-      for (let i = 0; i < arr.length - 1; i++) {
-        if (arr[i] > arr[i + 1]) {
-          [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
-          sorted = false
-        }
+  while (!sorted) {
+    sorted = true
+    for (let i = 0; i < arr.length - 1; i++) {
+      if (arr[i] > arr[i + 1]) {
+        [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
+        sorted = false
       }
     }
-    return arr
   }
-
-  let numbers = [5, 2, 8, 1, 9 , 33]
-  console.log(sort(numbers))
-
-
-
-
-function names(a,b) {
-  let email =`${a.toLowerCase()}${b.toLowerCase()}@emaile.com;`
-  return email
-
+  return arr
 }
-  let name1 = prompt('Введите имя')
-  let name2 = prompt('Введите фамилию')
-  let email = names(name1, name2)
-  console.log(email)
-  names()
+
+let numbers = [5, 2, 8, 1, 9, 33]
+console.log(sort(numbers))
+
+
+
+
+// function names(a, b) {
+//   let email = `${a.toLowerCase()}${b.toLowerCase()}@emaile.com;`
+//   return email
+
+// }
+// let name1 = prompt('Введите имя')
+// let name2 = prompt('Введите фамилию')
+// let email = names(name1, name2)
+// console.log(email)
+// names()
+
+
+function randomId(length) {
+  let aa = 'spdkpofijigifjio2362786JYSFDYUFGEULDYGLUY'
+  let id = ''
+  for (let i = 0; i < length; i++) {
+    id += aa[Math.round(Math.random() * aa.length)]
+  }
+  return id
+}
+
+console.log(randomId(8))
+console.log(randomId(12))
+
